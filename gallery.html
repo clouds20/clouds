@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Clouds</title>
+  <meta itemprop="image" content="img/balletgirl.jpg">
+  <meta property="og:image" content="img/balletgirl.jpg">
+  <meta name="description" content="Clouds Dance School">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140677595-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140677595-1');
+  </script>  
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+
+</head>
+<style>
+.container {
+  max-width: 900px; 
+  margin: auto;
+  margin-top: 50px;
+  padding: 2rem 1rem;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Create 2 equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+<body>
+<div class="showcase">
+<!-- Menu -->
+<div class="menu" id="myMenu">
+ <div class="menu-item">
+   <a href="index.html">home</a>
+   <a href="registration.html">registration</a>
+   <a href="gallery.html">gallery</a>   
+   <a href="contact.html">contact</a>
+ </div>
+   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i></a>
+</div>
+
+<div class="container">
+    <h1>Gallery</h1>
+	<br>
+	<!-- Instagram -->
+    <div class="row">
+		<div id="instafeed"></div>
+    </div>
+
+</div>	
+
+<!-- Footer menu -->
+<footer class="footer">
+	<a target="_blank" href="https://www.instagram.com/cloudsdanceschool/">instagram</a>
+	<a href="mailto:info@cloudsdanceschool.com">email</a>
+</footer>
+	
+<script src="js/menu.js"></script>
+
+<script type="text/javascript">
+var feed = new Instafeed({
+	get: 'user',
+	userId: '12119898118',
+	accessToken: '12119898118.1677ed0.dae627187f294d3aa719cfdf6232f0f7',
+	limit: 6,
+	resolution: 'standard_resolution',
+	sortBy: 'most-recent',
+	template: '<div class="column"><a href="{{link}}" target="_blank"> <img src="{{image}}" title="{{caption}}" class="responsive" width:"400px" height"300px" ></div></a>',
+	
+});
+feed.run();
+</script>
+
+</div>
+</body>
+</html>

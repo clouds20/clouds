@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Clouds</title>
+  <meta itemprop="image" content="img/balletgirl.jpg">
+  <meta property="og:image" content="img/balletgirl.jpg">
+  <meta name="description" content="Clouds Dance School">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140677595-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140677595-1');
+  </script>  
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+</head>
+<style>
+.container {
+  max-width: 700px; 
+  margin: auto;
+  padding: 3rem 3rem;
+}
+
+/* Create form */
+input[type=text], [type=email], [type=tel], textarea, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #6200ee;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: ##3700b3;
+}
+
+.form-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Create 2 equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+</style>
+<body>
+
+<div class="showcase">
+<!-- Menu -->
+<div class="menu" id="myMenu">
+ <div class="menu-item">
+   <a href="index.html">home</a>
+   <a href="registration.html">registration</a>
+   <a href="gallery.html">gallery</a>   
+   <a href="contact.html">contact</a>
+ </div>
+   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i></a>
+</div>
+
+<!-- Contact -->
+<div class="container">
+	<h1>Registration</h1>
+	
+    <br>
+	<div class="form-container">
+	  <form  method="post" name="myemailform" action="form.php">
+		<label for="fname">Student's Name*</label>
+		<input type="text" id="name" name="name" required>
+	    <div class="row">
+		<div class="col-25">
+		  <label for="status">I am a: </label>
+        </div>
+        <div class="col-75">		
+		  <input type="radio" name="status" value="Returning">Returning Student 
+		  <input type="radio" name="status" value="New">New Student<br>
+		  <br>
+		</div>
+        </div>
+		<label for="email">Email*</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="phone">Phone Number</label>
+		<input type="tel" id="phone" name="phone">
+		
+		<label for="address">Address</label>
+		<input type="text" id="address" name="address">
+		
+		<label for="country">Country</label>
+		<input type="text" id="country" name="country">
+		
+		<label for="postal_code">Postal Code</label>
+		<input type="text" id="postalcode" name="postal_code">
+		
+        <row>
+		<label for="ballettraining">Previous ballet training? </label>
+		<input type="radio" name="ballet_training" value="Yes">Yes 
+		<input type="radio" name="ballet_training" value="No">No<br>
+        <br>
+
+		<input type="submit" name='submit' value="submit">
+
+      </form>
+	</div>
+
+</div>
+
+<!-- Footer menu -->
+<footer class="footer">
+	<a target="_blank" href="https://www.instagram.com/cloudsdanceschool/">instagram</a>
+	<a href="mailto:info@cloudsdanceschool.com">email</a>
+</footer>
+
+
+<script src="js/menu.js"></script>
+</div>
+</body>
+</html>
